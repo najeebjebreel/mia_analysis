@@ -358,43 +358,11 @@ The following t-SNE visualizations of CIFAR-10 latent features reveal the spatia
 
 </div>
 
-<div align="center">
-
-**Figure 2: Vulnerable Samples at 0.5% False Positive Rate**
-
-![t-SNE visualization showing vulnerable samples (red circles) at 0.5% FPR](figures/tsne_cifar10_densenet_0.5perfpr.png)
-
-*Even with a more stringent threshold (0.5% FPR), vulnerable samples consistently appear at class boundaries, reinforcing the finding that vulnerability is tied to sample difficulty rather than overfitting.*
-
-</div>
 
 
-
-### Defense Effectiveness Summary
-
-**Best Privacy Protection:**
-- **Differential Privacy**: Achieves near-random MIA performance (AUC ≈ 50%) but with significant utility loss
-- **Strong Regularization**: λ=5e-3 provides good privacy protection with moderate utility degradation
-
-**Best Utility-Privacy Tradeoff:**
-- **RegDrop**: Combines regularization with dropout for balanced performance
-- **Moderate Regularization**: λ=5e-4 maintains high utility while reducing vulnerability
-
-**Surprising Results:**
-- **Label Smoothing**: Actually increases MIA vulnerability despite improving generalization
-- **Early Stopping**: Provides minimal privacy benefit compared to training time savings
 
 ## Citation
 
-If you use this code in your research, please cite:
-
-```bibtex
-@article{membership_inference_beyond_overfitting,
-  title={Membership Inference Attacks Beyond Overfitting},
-  author={Mona Khalil, Alberto Blanco-Justicia, Najeeb Jebreel, and Josep Domingo-Ferrer},
-  year={2025}
-}
-```
 
 ## License
 
