@@ -200,19 +200,11 @@ Adds calibrated noise to gradients during training:
 ## Results and Checkpoints
 
 Models are saved in respective directories based on dataset and method:
-
-### CIFAR-10 Checkpoints
-- `cifar10/checkpoints_orig/`: Original models
-- `cifar10/checkpoints_ls/`: Label smoothing models  
-- `cifar10/checkpoints_dpsgd/`: DP-SGD models
-- `cifar10/checkpoints_regdrop/`: Regularization + dropout models
-
-### Purchase-100 Checkpoints
-- `purchase/checkpoints_orig/`: Original models
-- `purchase/checkpoints_ls/`: Label smoothing models
-- `purchase/checkpoints_reg/`: Regularization-only models
-- `purchase/checkpoints_regdrop/`: Regularization + dropout models
-- `purchase/checkpoints_dpsgd/`: DP-SGD models
+- `dataset_name/checkpoints_orig/`: Original models
+- `dataset_name/checkpoints_ls/`: Label smoothing models
+- `dataset_name/checkpoints_reg/`: Regularization-only models
+- `dataset_name/checkpoints_regdrop/`: Regularization + dropout models
+- `dataset_name/checkpoints_dpsgd/`: DP-SGD models
 
 Each checkpoint includes:
 - Model state dictionary
