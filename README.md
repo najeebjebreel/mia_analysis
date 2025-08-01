@@ -7,18 +7,7 @@ This repository implements membership inference attacks on deep neural networks 
 Membership inference attacks (MIAs) attempt to determine whether a specific data point was used during model training. While previous research has primarily attributed MIA success to model overfitting, this work investigates **what makes certain samples vulnerable to MIAs even in non-overfitted models with good generalization capabilities**.
 
 
-### Main Findings
-
-Our research reveals that **vulnerable samples are outliers located at class boundaries** rather than simply overfitted examples. These samples are characterized as:
-
-- **Hard-to-classify samples**: Located at decision boundaries between classes
-- **Noisy or unclear samples**: Containing visual artifacts or ambiguities  
-- **Outlier samples**: Significantly different from typical class representatives
-- **Memorized samples**: Model relies on specific details rather than general patterns
-
-
-
-## Requirements
+## Main Requirements
 
 ```bash
 pip install torch torchvision
