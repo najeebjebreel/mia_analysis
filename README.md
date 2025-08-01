@@ -196,21 +196,6 @@ All Purchase-100 models use a custom multi-layer perceptron:
 - **Dropout**: Applied after each activation (when using dropout defense)
 - **Classes**: 100
 
-## Attack Methodology
-
-The membership inference attacks are implemented using:
-
-1. **Threshold Attack**: Uses model confidence scores
-2. **Attack Input**: Logits, losses, and labels from training and test sets
-3. **Evaluation**: Measures attack accuracy across the entire dataset
-
-### Attack Components
-
-The `compute_attack_components` function extracts:
-- **Logits**: Raw model outputs before softmax
-- **Losses**: Cross-entropy losses for each sample
-- **Labels**: True class labels
-- **Predictions**: Model predictions
 
 ## Privacy Defense Mechanisms
 
