@@ -1,4 +1,4 @@
-# Membership Inference Attacks Beyond Overfitting ()
+# Membership Inference Attacks Beyond Overfitting() 
 
 This repository implements membership inference attacks on deep neural networks trained with various privacy-preserving techniques. The project evaluates how different defense mechanisms affect model vulnerability to membership inference attacks on both **CIFAR-10** and **Purchase-100** datasets, with a focus on understanding vulnerability beyond traditional overfitting explanations.
 
