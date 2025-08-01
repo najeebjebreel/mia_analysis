@@ -178,26 +178,8 @@ bash train-all.sh
 - `--dp_microbatches`: Number of microbatches (default: 1)
 - `--epochs`: Training epochs for DP-SGD (Purchase-100 default: 200)
 
-## Model Architectures
 
-### CIFAR-10: DenseNet-12
-All CIFAR-10 models use DenseNet-12 with the following configuration:
-- **Depth**: 100 layers
-- **Growth Rate**: 12
-- **Compression Rate**: 2
-- **Dropout**: 0 (varies by training method)
-- **Classes**: 10
-
-### Purchase-100: Custom MLP
-All Purchase-100 models use a custom multi-layer perceptron:
-- **Input**: 600 features
-- **Architecture**: 600 → 1024 → 512 → 256 → 128 → 100
-- **Activation**: Tanh
-- **Dropout**: Applied after each activation (when using dropout defense)
-- **Classes**: 100
-
-
-## Privacy Defense Mechanisms
+## Defense Mechanisms
 
 ### 1. Label Smoothing
 Regularizes the model by softening the target distribution:
