@@ -1,16 +1,11 @@
 # [Membership Inference Attacks Beyond Overfitting]() 
 
-This repository implements membership inference attacks on deep neural networks trained with various privacy-preserving techniques. The project evaluates how different defense mechanisms affect model vulnerability to membership inference attacks on both **CIFAR-10** and **Purchase-100** datasets, with a focus on understanding vulnerability beyond traditional overfitting explanations.
+This repository implements membership inference attacks on deep neural networks trained with various privacy-preserving techniques. The project evaluates how different defense mechanisms affect model vulnerability to membership inference attacks, with a focus on understanding vulnerability beyond traditional overfitting explanations.
 
 ## Overview
 
 Membership inference attacks (MIAs) attempt to determine whether a specific data point was used during model training. While previous research has primarily attributed MIA success to model overfitting, this work investigates **what makes certain samples vulnerable to MIAs even in non-overfitted models with good generalization capabilities**.
 
-### Key Research Questions
-
-**Q1**: What makes certain samples vulnerable to MIAs even in non-overfitted models?
-
-**Q2**: How can these samples be effectively protected?
 
 ### Main Findings
 
@@ -21,15 +16,6 @@ Our research reveals that **vulnerable samples are outliers located at class bou
 - **Outlier samples**: Significantly different from typical class representatives
 - **Memorized samples**: Model relies on specific details rather than general patterns
 
-This challenges the traditional view that membership inference attacks primarily exploit overfitted samples, showing that vulnerability extends to boundary cases that may be correctly classified but memorized through specific features.
-
-## Features
-
-- **Multiple Datasets**: CIFAR-10 (image classification) and Purchase-100 (tabular data)
-- **Multiple Training Modes**: Original, regularization, dropout, label smoothing, and differential privacy (DP-SGD)
-- **Membership Inference Attack Implementation**: Uses TensorFlow Privacy library for comprehensive attack evaluation
-- **Diverse Architectures**: DenseNet-100 for CIFAR-10, custom MLP for Purchase-100
-- **Attack Analysis**: Comprehensive evaluation using logits, losses, and prediction confidence
 
 
 ## Requirements
