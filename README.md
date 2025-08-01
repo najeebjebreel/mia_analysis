@@ -352,7 +352,7 @@ The following t-SNE visualizations of CIFAR-10 latent features reveal the spatia
 
 **Figure 1: Vulnerable Samples at 1% False Positive Rate**
 
-![t-SNE visualization showing vulnerable samples (red circles) at 1% FPR](https://github.com/user-attachments/assets/vulnerable-samples-1fpr.png)
+![t-SNE visualization showing vulnerable samples (red circles) at 1% FPR](figures/tsne_cifar10_densenet_1perfpr.png)
 
 *Vulnerable samples are predominantly located at the periphery and boundaries of class clusters, indicating they are outliers or boundary cases rather than typical class representatives.*
 
@@ -362,7 +362,7 @@ The following t-SNE visualizations of CIFAR-10 latent features reveal the spatia
 
 **Figure 2: Vulnerable Samples at 0.5% False Positive Rate**
 
-![t-SNE visualization showing vulnerable samples (red circles) at 0.5% FPR](https://github.com/user-attachments/assets/vulnerable-samples-0.5fpr.png)
+![t-SNE visualization showing vulnerable samples (red circles) at 0.5% FPR](figures/tsne_cifar10_densenet_0.5perfpr.png)
 
 *Even with a more stringent threshold (0.5% FPR), vulnerable samples consistently appear at class boundaries, reinforcing the finding that vulnerability is tied to sample difficulty rather than overfitting.*
 
