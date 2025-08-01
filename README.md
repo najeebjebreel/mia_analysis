@@ -216,7 +216,7 @@ The following t-SNE visualizations of CIFAR-10 latent features reveal the spatia
 
 
 ## Citation
-# [Membership Inference Attacks Beyond Overfitting]()
+[Membership Inference Attacks Beyond Overfitting]()
 
 ## License
 
