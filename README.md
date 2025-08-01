@@ -1,6 +1,8 @@
-# [Membership Inference Attacks Beyond Overfitting]() 
+# Membership Inference Attacks Beyond Overfitting
 
 This repository implements membership inference attacks on deep neural networks trained with various privacy-preserving techniques. The project evaluates how different defense mechanisms affect model vulnerability to membership inference attacks, with a focus on understanding vulnerability beyond traditional overfitting explanations.
+
+⚠️ **Code Attribution**: This repository is primarily adapted from the [MIA_defense_HAMP repository](https://github.com/DependableSystemsLab/MIA_defense_HAMP) by the Dependable Systems Lab.
 
 ## Overview
 
@@ -63,43 +65,13 @@ bash train-all.sh
 
 #### Purchase-100 Experiments
 
-Navigate to the `purchase/` directory:
+Same as `purchase/` directory:
 
 ```bash
 cd purchase/
 ```
 
-**1. Train Original Model**
-```bash
-python purchase-train-org.py --gpu 0
-```
-
-**2. Train with Regularization Only**
-```bash
-python purchase-train-reg.py --wd 0.001 --gpu 0
-```
-
-**3. Train with Regularization + Dropout**
-```bash
-python purchase-train-regdrop.py --wd 0.005 --drp 0.25 --gpu 0
-```
-
-**4. Train with Label Smoothing**
-```bash
-python purchase-train-ls.py --epsilon 0.03 --gpu 0
-```
-
-**5. Train with Differential Privacy (DP-SGD)**
-```bash
-python purchase-train-dpsgd.py --dp_batchsize 256 --lr 0.001 \
-    --dp_norm_clip 1.0 --dp_noise_multiplier 1.0 --epochs 200 --gpu 0
-```
-
-**6. Train All Purchase Models**
-```bash
-bash train-all.sh
-```
-
+Run the corresponding training scripts for Purchase-100, following the same logic as in CIFAR-10 experiments. Replace cifar10 with purchase in script names and adjust hyperparameters as needed.
 
 ## Datasets
 
@@ -275,7 +247,7 @@ The following t-SNE visualizations of CIFAR-10 latent features reveal the spatia
 
 
 ## Citation
-
+# [Membership Inference Attacks Beyond Overfitting]()
 
 ## License
 
