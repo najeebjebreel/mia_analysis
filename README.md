@@ -81,13 +81,14 @@ Run the corresponding training scripts for Purchase-100, following the same logi
 - **Training samples**: 50,000
 - **Test samples**: 10,000
 - **Features**: 32×32×3 RGB images
+- **Source**: This dataset will be automatically downloaded.
 
 ### Purchase-100
 - **Type**: Tabular data (shopping records)
 - **Classes**: 100
 - **Features**: 600-dimensional binary vectors
 - **Split**: 80% training, 20% validation/test
-- **Source**: Requires `purchase.npy` file
+- **Source**: Requires `purchase.npy` file that can be downloaded from this repository [MIA_defense_HAMP repository](https://github.com/DependableSystemsLab/MIA_defense_HAMP)
 
 ## Command Line Arguments
 
