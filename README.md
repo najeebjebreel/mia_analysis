@@ -31,27 +31,6 @@ This challenges the traditional view that membership inference attacks primarily
 - **Diverse Architectures**: DenseNet-100 for CIFAR-10, custom MLP for Purchase-100
 - **Attack Analysis**: Comprehensive evaluation using logits, losses, and prediction confidence
 
-## Project Structure
-
-```
-├── cifar10/                      # CIFAR-10 experiments
-│   ├── cifar10-train-org.py      # Original undefended model training
-│   ├── cifar10-train-reg.py      # Regularization 
-│   ├── cifar10-train-regdrop.py  # Regularization + dropout training
-│   ├── cifar10-train-ls.py       # Label smoothing defense training
-│   ├── cifar10-train-dpsgd.py    # Differential privacy (DP-SGD) training
-│   └── train-all.sh              # Training script for CIFAR-10 models
-|   └── Analysis MIAs.ipynb       # More analysis on vulnerable samples
-├── purchase/                     # Purchase-100 experiments
-│   ├── purchase-train-org.py     # Original undefended model training
-│   ├── purchase-train-reg.py     # Regularization-only training
-│   ├── purchase-train-regdrop.py # Regularization + dropout training
-│   ├── purchase-train-ls.py      # Label smoothing defense training
-│   ├── purchase-train-dpsgd.py   # Differential privacy (DP-SGD) training
-│   └── train-all.sh              # Training script for Purchase models
-|   └── Analysis MIAs.ipynb       # More analysis on vulnerable samples
-└── README.md                     # This file
-```
 
 ## Requirements
 
