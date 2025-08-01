@@ -127,38 +127,6 @@ Run the corresponding training scripts for Purchase-100, following the same logi
 - `--epochs`: Training epochs for DP-SGD (Purchase-100 default: 200)
 
 
-## Defense Mechanisms
-
-### 1. Label Smoothing
-Regularizes the model by softening the target distribution:
-```
-loss = ε * uniform_dist + (1-ε) * one_hot_labels
-```
-- **CIFAR-10**: Typical ε = 0.1
-- **Purchase-100**: Typical ε = 0.03
-
-### 2. Regularization + Dropout (CIFAR-10 & Purchase-100)
-Combines L2 weight decay with dropout regularization:
-- **Weight Decay**: Penalizes large weights 
-  - CIFAR-10 typical: 0.0005
-  - Purchase-100 typical: 0.005
-- **Dropout**: Randomly zeroes neurons during training (typical: 0.25)
-
-### 3. Regularization Only (Purchase-100)
-Applies L2 weight decay without dropout:
-- **Weight Decay**: Penalizes large weights (typical: 0.001-0.005)
-- **Optimizer**: Adam with weight decay parameter
-
-### 4. Differential Privacy (DP-SGD)
-Adds calibrated noise to gradients during training:
-- Clips gradients to bound sensitivity
-- Adds Gaussian noise proportional to clipping norm
-- Tracks privacy budget using privacy accounting
-- **Privacy Parameters**: 
-  - Noise multiplier: Controls privacy/utility tradeoff
-  - Clipping norm: Bounds gradient sensitivity
-  - δ (delta): Set to 1/n_train typically
-
 ## Results and Checkpoints
 
 Models are saved in respective directories based on dataset and method:
